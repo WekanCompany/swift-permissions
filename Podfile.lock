@@ -1,0 +1,54 @@
+PODS:
+  - SPPermissions (5.3):
+    - SPPermissions/Core (= 5.3)
+  - SPPermissions/Bluetooth (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Calendar (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Camera (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Contacts (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Core (5.3)
+  - SPPermissions/Location (5.3):
+    - SPPermissions/Core
+  - SPPermissions/MediaLibrary (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Microphone (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Motion (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Notification (5.3):
+    - SPPermissions/Core
+  - SPPermissions/PhotoLibrary (5.3):
+    - SPPermissions/Core
+  - SPPermissions/Reminders (5.3):
+    - SPPermissions/Core
+  - SPPermissions/SpeechRecognizer (5.3):
+    - SPPermissions/Core
+
+DEPENDENCIES:
+  - SPPermissions
+  - SPPermissions/Bluetooth
+  - SPPermissions/Calendar
+  - SPPermissions/Camera
+  - SPPermissions/Contacts
+  - SPPermissions/Location
+  - SPPermissions/MediaLibrary
+  - SPPermissions/Microphone
+  - SPPermissions/Motion
+  - SPPermissions/Notification
+  - SPPermissions/PhotoLibrary
+  - SPPermissions/Reminders
+  - SPPermissions/SpeechRecognizer
+
+SPEC REPOS:
+  trunk:
+    - SPPermissions
+
+SPEC CHECKSUMS:
+  SPPermissions: a8056ef987855e8b231481f61bd8b4cbd3fcfd80
+
+PODFILE CHECKSUM: 21c3fda7e6c4a1cebba6c649298e446fe0e1d5ef
+
+COCOAPODS: 1.8.4
