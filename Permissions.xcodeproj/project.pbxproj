@@ -369,7 +369,7 @@
 		};
 		7F01EED12423503A00AC82F0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A10D46E6D331D05921FBE155 /* Pods-Permissions.debug.xcconfig */;
+			baseConfigurationReference = 77AB197408820F38F148A269 /* Pods-Permissions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -6,11 +6,10 @@
 //  Copyright © 2020 WeKanCode. All rights reserved.
 //
 
-import UIKit
 import SPPermissions
+import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource   {
-    
     @IBOutlet weak var tableView: UITableView!
     
     var allPermissions: [SPPermission] = SPPermission.allCases
@@ -21,48 +20,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         
         navigationItem.title = "Choose Style"
-//        let segmentedControl = UISegmentedControl(items: ["List", "Dialog", "Native"])
-//        navigationItem.titleView = segmentedControl
-//        segmentedControl.selectedSegmentIndex = 0
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .play, target: self, action: #selector(self.requestPermissions))
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        //SPPermission.Dialog.request(with: [.camera, .calendar, .locationAlwaysAndWhenInUse], on: self)
-    }
+     }
 
     @objc func requestPermissions() {
         if selectedPermissions.isEmpty { return }
-        
         let controller = SPPermissions.native(selectedPermissions)
         controller.delegate = self
         controller.present(on: self)
-        
-//        guard let segmentControl = navigationItem.titleView as? UISegmentedControl else { return }
-//        switch segmentControl.selectedSegmentIndex {
-//        case 0:
-//            let controller = SPPermissions.list(selectedPermissions)
-//            controller.dataSource = self
-//            controller.delegate = self
-//            controller.present(on: self)
-//        case 1:
-//            let controller = SPPermissions.dialog(selectedPermissions)
-//            controller.dataSource = self
-//            controller.delegate = self
-//
-//            /**
-//             You can disable bouns animation and gester if need.
-//             Removed start annimation, removed gester drag dialog.
-//             */
-//            // controller.bounceAnimationEnabled = false
-//
-//            controller.present(on: self)
-//        case 2:
-//            let controller = SPPermissions.native(selectedPermissions)
-//            controller.delegate = self
-//            controller.present(on: self)
-//        default:
-//            break
-//        }
     }
 }
 
@@ -78,23 +44,6 @@ extension ViewController: SPPermissionsDataSource, SPPermissionsDelegate {
      - parameter permission: Configure cell for it permission.
      */
     func configure(_ cell: SPPermissionTableViewCell, for permission: SPPermission) -> SPPermissionTableViewCell {
-        
-        /*
-         // Titles
-         cell.permissionTitleLabel.text = "Notifications"
-         cell.permissionDescriptionLabel.text = "Remind about payment to your bank"
-         cell.button.allowTitle = "Allow"
-         cell.button.allowedTitle = "Allowed"
-         
-         // Colors
-         cell.iconView.color = .systemBlue
-         cell.button.allowedBackgroundColor = .systemBlue
-         cell.button.allowTitleColor = .systemBlue
-         
-         // If you want set custom image.
-         cell.set(UIImage(named: "IMAGE-NAME")!)
-         */
-        
         return cell
     }
     
